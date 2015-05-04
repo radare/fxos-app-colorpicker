@@ -2,8 +2,8 @@
   "name": "Color Picker",
   "description": "Simple RGB color picker tool",
 "package_path": "http://colorpicker.ffos.lolcathost.org/colorpicker.zip",
-"version": "0.1",
-"size":35711,
+"version": "0.2",
+"size":36006,
   "launch_path": "/index.html",
   "icons": {
     "128": "/icon128.png",
@@ -13,5 +13,5 @@
     "name": "pancake",
     "url": "http://colorpicker.ffos.lolcathost.org/"
   },
-  "orientation": ["portrait"]
+  "orientation": ["portrait-primary"]
 }

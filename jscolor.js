@@ -343,7 +343,7 @@ var jscolor = {
 		this.minV = 0; // read-only  0-1
 		this.maxV = 1; // read-only  0-1
 
-		this.pickerOnfocus = true; // display picker on focus?
+		this.pickerOnfocus = false; // display picker on focus?
 		this.pickerMode = 'HSV'; // HSV | HVS
 		this.pickerPosition = 'bottom'; // left | right | top | bottom
 		this.pickerSmartPosition = true; // automatically adjust picker position when necessary
@@ -692,13 +692,21 @@ var jscolor = {
 
 			// picker border
 			p.boxB.style.position = 'absolute';
+			/* top */
+			//p.boxB.style.top = y+'px';
+			p.boxB.style.left = 7+'px';
+			/* bottom */
+			//p.boxB.style.top = window.innerHeight-250+'px';
+			p.boxB.style.bottom = '10px';
+			//p.boxB.style.top = window.height-160+'px';
+			//p.boxB.style.left = 7+'px';
+/*
 			p.boxB.style.clear = 'both';
-			p.boxB.style.left = x+'px';
-			p.boxB.style.top = (y+10)+'px';
 			p.boxB.style.zIndex = THIS.pickerZIndex;
 			p.boxB.style.border = THIS.pickerBorder+'px solid';
 			p.boxB.style.borderColor = THIS.pickerBorderColor;
 			p.boxB.style.background = THIS.pickerFaceColor;
+*/
 
 			// pad image
 			p.pad.style.width = jscolor.images.pad[0]+'px';

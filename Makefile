@@ -2,6 +2,7 @@ PKGNAME=colorpicker
 FILES+=arrow.gif
 FILES+=cross.gif
 FILES+=hs.png
+FILES+=nolongpress.js
 FILES+=responsive.css
 FILES+=hv.png
 FILES+=icon128.png
@@ -12,9 +13,10 @@ FILES+=jscolor.js
 FILES+=Makefile
 FILES+=manifest.webapp
 
-SZ=$(shell du -b ${PKGNAME}.zip |awk '{print $$1}')
+SZ=$(shell wc -c ${PKGNAME}.zip |awk '{print $$1}')
 
 all:
 	rm -f ${PKGNAME}.zip
 	zip ${PKGNAME}.zip ${FILES}
+	echo Size=${SZ}
 	sed -i -e 's/"size":.*/"size":'${SZ}',/g' manifest.webapp
